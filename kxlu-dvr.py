@@ -29,7 +29,7 @@ def record(args, src, end):
 
 def get_arguments():
     if len(sys.argv) != 4:
-        print("Missing required arguments ( show-title, length of show )", sys.stderr)
+        print("Missing required arguments ( show-title, length of show, output path)", sys.stderr)
         sys.exit(-1)
     
     return {
@@ -65,7 +65,9 @@ def format_output_path(path, title):
     
     tm = time.gmtime()
     y = tm.tm_year ; m = tm.tm_mon ; d = tm.tm_mday
-    timestamp = y + '_' + m + '_' + d + '_'
+    timestamp = str(y) + '_' + str(m) + '_' + str(d) + '_'
 
     path = path + timestamp + title
     return path
+
+main()
