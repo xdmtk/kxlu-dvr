@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from urllib import request
 import sys, os, time
 buf_size = 4096
@@ -67,7 +68,7 @@ def format_output_path(path, title):
     y = tm.tm_year ; m = tm.tm_mon ; d = tm.tm_mday
     timestamp = str(y) + '_' + str(m) + '_' + str(d) + '_'
 
-    path = path + timestamp + title
+    path = path + timestamp + title + '.mp3'
     return path
 
 main()
