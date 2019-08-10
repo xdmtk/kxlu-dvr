@@ -24,14 +24,13 @@ def record(args, src, end):
     while int(time.time()) < end:
         stream.write(conn.read(buf_size))
     conn.close()
-
-
+    sys.exit(0)
 
 
 def get_arguments():
     if len(sys.argv) != 4:
-        print("Missing required arguments ( show-title, length of show )")
-        exit(-1)
+        print("Missing required arguments ( show-title, length of show )", sys.stderr)
+        sys.exit(-1)
     
     return {
         'show_title' : sys.argv[1],
@@ -45,8 +44,8 @@ def get_stream_source():
     for stream in streams:
         if request.urlopen(stream).getcode() == 200:
             return stream
-    print("All streams are down! Check stream sources")
-    exit(-1)
+    print("All streams are down! Check stream sources", file=sys.stderr)
+    sys.exit(-1)
 
 
 
@@ -61,8 +60,8 @@ def format_output_path(path, title):
     if path[len(path)-1] != '/':
         path = path + '/'
     if not os.path.isdir(path):
-        print("Bad output path supplied")
-        exit(-1)
+        print("Bad output path supplied", file=sys.stderr)
+        sys.exit(-1)
     
     tm = time.gmtime()
     y = tm.tm_year ; m = tm.tm_mon ; d = tm.tm_mday
