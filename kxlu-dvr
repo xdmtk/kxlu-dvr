@@ -52,7 +52,8 @@ def get_stream_source():
 
 def get_streams():
     return [
-        "http://kxlu.streamguys1.com/kxlu-hi"
+        "http://kxlu.streamguys1.com/kxlu-hi",
+        "http://www.ednixon.com:8120/stream"
     ]
     
     
