@@ -4,7 +4,7 @@ A simple stream writing script to record your favorite 88.9FM KXLU radio shows.
 ![](https://indiepulsemusic.files.wordpress.com/2018/03/kxlu-logo-revised.png?w=424&h=160&crop=1)
 
 ### Introduction
-Probably most efficiently utilized as a cron task on a computer with little downtime, this short little script utilizes the `urllib` module to pull stream data from the KXLU live feed and write it to an mp3 file. Inspired by almost always missing the awesome tunes by https://alienairmusic.com on Sunday evenings. 
+Probably most efficiently utilized as a cron task on a computer with little downtime, this short little script utilizes the `urllib` module to pull stream data from the KXLU live feed and write it to an mp3 file. Inspired by almost always missing the awesome tunes by http://alienairmusic.com on Sunday evenings. 
 
 
 ### Usage  
