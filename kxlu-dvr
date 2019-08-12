@@ -10,7 +10,7 @@ def main():
     args = get_arguments()
     stream_source = get_stream_source()
     start_time = int(time.time())
-    end_time = start_time + (args['show_length'] * 3600)
+    end_time = start_time + (args['show_length'] * 60)
 
     record(args, stream_source, end_time)
     
