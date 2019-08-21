@@ -11,6 +11,6 @@ Probably most efficiently utilized as a cron task on a computer with little down
 The script takes three arguments, which must be given positionally. The title of the segment to be recorded, the length of the segment in minutes, and the _full_ output directory path. 
 
 ```
-./kxlu-dvr <title> <length in hours> <output path>
+./kxlu-dvr <title> <length in minutes> <output path>
 ```
 
